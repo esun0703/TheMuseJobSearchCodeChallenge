@@ -1,0 +1,35 @@
+.search-bar {
+    display: flex;
+    width: 100%;
+    justify-content: 'center';
+
+    input {
+        height: 30px;
+        width: 80%;
+        border: none;
+        background-color: #343b51;
+        color: #fff;
+        border-bottom: 4px solid #1DA8A5;
+        padding: 2px 10px;
+        font-size: 16px;
+        font-weight: 500;
+        &::placeholder {
+            color: #fff;
+        }
+    }
+    
+    button {
+        height: 38px;
+        width: 20%;
+        border: none;
+        background-color: #343b51;
+        border-bottom: 4px solid #1DA8A5;
+    }
+    
+    
+}
+
+
+@media screen and (mid-width: 600) {
+
+}
