@@ -1,14 +1,19 @@
 import React from 'react';
 import './App.scss';
 import SearchBar from './components/SearchBar';
+import SearchResultsDisplay from './components/SearchResultsDisplay';
+import { JobSearchProvider } from './contexts/JobContext';
 
 function App() {
   return (
-    <section className="App">
-      <div className='container'>
-        <SearchBar/>
-      </div>
-    </section>
+    <JobSearchProvider>
+      <section className="App">
+        <div className='container'>
+          <SearchBar/>
+          <SearchResultsDisplay/>
+        </div>
+      </section>
+    </JobSearchProvider>
   );
 }
 

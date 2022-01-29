@@ -15,8 +15,7 @@ export const JobSearchProvider: FC = ({children}) => {
     const [jobsList, setJobsList] = useState<SingleJob[]>([]);
 
     const searchJobTitle = async (jobTitle : string) => {
-        console.log("searched")
-        const result = [{title: 'this is a job for now'}]
+        const result = [{title: 'this is a job for now'}, {title: 'this is another job'}, {title: 'this is a job for now'}, {title: 'this is another job'}]
         setJobsList(result);
     }
     
