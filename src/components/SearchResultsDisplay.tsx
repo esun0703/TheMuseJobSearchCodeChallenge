@@ -8,7 +8,21 @@ const SearchResultsDisplay = () => {
     return (
         <ul className={'search-results'}>
             {JobContext?.jobsList.map((singleJob) => {
-                return <li key={singleJob.title}>{singleJob.title}</li>
+                console.log({singleJob})
+                const {id, name, locations, levels} = singleJob;
+                return (
+                    <li key={id}>
+                        <p className="job-title">{name.substring(0, 100)}</p>
+                        {locations.length || levels.length ? (
+                            <div>
+                                {locations.length ? locations.map((location) => <p className="label-text">{location.name}</p>) : null}
+                                {levels.length ? levels.map((level) => <p className="label-text">{level.name}</p>) : null}
+                            </div>
+                        ) : 
+                            null
+                        }
+                    </li>
+                )
             })}
         </ul>
     )
