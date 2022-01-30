@@ -1,5 +1,6 @@
 import React, { useState, createContext, FC} from 'react';
 import Axios from 'axios';
+import { JobSearchFilters } from './Helpers';
 
 interface Location {
     name: string,
